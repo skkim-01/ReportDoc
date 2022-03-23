@@ -1,5 +1,12 @@
-## react + chrome extension issues
+## react + chrome extension issues (solved)
+--- 
+https://viglucci.io/how-to-polyfill-buffer-with-webpack-5
 
+![image](https://user-images.githubusercontent.com/46100421/159683010-ce9c7165-826f-4e36-a8ed-27cdd4f2375b.png)
+
+![image](https://user-images.githubusercontent.com/46100421/159683123-5497d104-eb13-4359-aec5-04371c9e19eb.png)
+
+---
 ##### 1. create-react-app으로 리액트 프로젝트 생성
 ##### 2. manifest.json을 chrome extension 포맷에 맞게 수정
 
@@ -46,7 +53,7 @@ npm ERR! Exit status 1
 resolve: {
       fallback: { 
         "stream": require.resolve("stream-browserify"),
-        "buffer": require.resolve("buffer")
+        "buffer": require.resolve("buffer/")
       },
 ```
 
